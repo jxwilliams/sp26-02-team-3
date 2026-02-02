@@ -1,4 +1,4 @@
-# sp26-02-team-3 ShopLocal
+# sp26-02-team-3 
 ## title
 ## Spartan Vet
 ## team members
