@@ -63,45 +63,45 @@ Write each story as: **As a `<role>`, I want `<capability>`, so that `<benefit>`
   ```
 
 ### 2.2 Provider Stories
-- **US‑PROV‑001 — <short title>**  
-  _Story:_ As a provider, I want … so that …  
-  _Acceptance:_
+- **US‑PROV‑001 — <Account Managment>**  
+  _Story:_ As a provider, i want to log in to my account to manage my appointments
+  _Acceptance:**
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: Provier logs in 
+    Given <i have a account >
+    When  <when i enter a valid login>
+    Then  <Then i should be logged in and see the provider dashboard>
   ```
 
-- **US‑PROV‑002 — <short title>**  
-  _Story:_ As a provider, I want … so that …  
-  _Acceptance:_
+- **US‑PROV‑002 — <View Request >**  
+  _Story:_ As a provider, i want to view pending appointment request
+  _Acceptance:**
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: <View pending appoointments>
+    Given <i am logged in as a provider>
+    When  <when i open the appointmnets page>
+    Then  <then i should see a list of pending appointment requests>
   ```
 
 ### 2.3 SysAdmin Stories
-- **US‑ADMIN‑001 — <short title>**  
-  _Story:_ As a sysadmin, I want … so that …  
-  _Acceptance:_
+- **US‑ADMIN‑001 — <Manage List Of Users>**  
+  _Story:_ As a sysadmin, i want to view a list of all users so that i can manage accounts 
+  _Acceptance:**
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: <view all users>
+    Given <given i am logged in as a sysadmin >
+    When  <when i open the user management page>
+    Then  <then i should see a list of all user accounts>
   ```
 
-- **US‑ADMIN‑002 — <short title>**  
-  _Story:_ As a sysadmin, I want … so that …  
+- **US‑ADMIN‑002 — <Disable a User>**  
+  _Story:_ As a sysadmin, I want to disable a user account so that i can handle problems 
   _Acceptance:_
   ```gherkin
-  Scenario: <happy path>
-    Given <preconditions>
-    When  <action>
-    Then  <observable outcome>
+  Scenario: <dissable a user 
+    Given <given i am logged in as a sysadmin and a user exists>
+    When  <when i disable the user account>
+    Then  <the account should show as disabled in the user list>
   ```
 
 ---
