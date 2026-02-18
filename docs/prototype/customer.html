@@ -71,6 +71,17 @@
         <h1>Spartan Vet - Customer Portal</h1>
     </header>
     <!--login-->
+    <div class="card" id="loginSection">
+        <h2>Customer Login</h2>
+    
+        <input type="text" id="username" placeholder="Username">
+    
+        <input type="password" id="password" placeholder="Password">
+    
+        <div id="errorMsg" style="color:red; font-size:14px;"></div>
+    
+        <button onclick="login()">Login</button>
+    </div>
     <script>
         function login() {
             var user = document.getElementById("username").value;
