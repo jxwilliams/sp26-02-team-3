@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spartan Vet - Customer Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1b3a2f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #2f5d4a;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+        }
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #1b3a2f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #2f5d4a;
+        }
+
+        input {
+            padding: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spartan Vet - Customer Portal</h1>
+    </header>
+    
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Appointments</a>
+            <a href="#">Resources</a>
+        </div>
+    
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button onclick="searchFunction()">Search</button>
+        </div>
+    </nav>
+    <!--customer profile-->
+    <div class="container">
+        <div class="card">
+            <h2>Create / Update Profile</h2>
+            <form>
+                <label>Full Name:</label><br>
+                <input type="text"><br><br>
+    
+                <label>Email:</label><br>
+                <input type="email"><br><br>
+    
+                <label>Phone:</label><br>
+                <input type="tel"><br><br>
+    
+                <label>Pet Name:</label><br>
+                <input type="text"><br><br>
+    
+                <button type="button" onclick="saveProfile()">Save Profile</button>
+            </form>
+        </div>  
+        <!-- appointment section-->
+        <div class="card">
+            <h2>Schedule Appointment</h2>
+            <p>Click below to request a veterinary appointment.</p>
+            <button onclick="makeAppointment()">Make Appointment</button>
+        </div>
+<!-- helpful links? may change--> 
+<div class="card">
+    <h2>Helpful Links</h2>
+    <ul>
+        <li><a href="#">Vaccination Records</a></li>
+        <li><a href="#">Prescription Refills</a></li>
+        <li><a href="#">Pet Care Resources</a></li>
+        <li><a href="#">Billing & Payments</a></li>
+    </ul>
+</div>
+
+</div>
+
+<script>
+    function searchFunction() {
+        alert("Search feature coming soon!");
+    }
+
+    function saveProfile() {
+        alert("Profile saved (demo only).");
+    }
+
+    function makeAppointment() {
+        alert("Appointment request sent (demo only).");
+    }
+</script>
+</body>
+</html>
