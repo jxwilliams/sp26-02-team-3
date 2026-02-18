@@ -71,12 +71,26 @@
         <h1>Spartan Vet - Customer Portal</h1>
     </header>
     <!--login-->
-    div class="card" id="loginSection">
-        <h2>Customer Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-    </div>
+    <script>
+        function login() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var error = document.getElementById("errorMsg");
+        
+            if (user === "user" && pass === "password") {
+                document.getElementById("loginSection").style.display = "none";
+                document.getElementById("dashboard").style.display = "block";
+                error.innerHTML = "";
+            } else {
+                error.innerHTML = "Invalid username or password.";
+            }
+        }
+        
+        function logout() {
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("loginSection").style.display = "block";
+        }
+        </script>
     <!--dashboard-->
     <div id="dashboard">
 
