@@ -70,7 +70,51 @@
     <header>
         <h1>Spartan Vet - Customer Portal</h1>
     </header>
+    <!--login-->
+    div class="card" id="loginSection">
+        <h2>Customer Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    <!--dashboard-->
+    <div id="dashboard">
+
+        <div class="section">
+            <h2>Profile</h2>
+            <p>Manage your personal and pet information.</p>
+        </div>
+
+        <div class="section">
+            <h2>Appointments</h2>
+            <button onclick="location.href='appointment.html'">
+                Make Appointment
+            </button>
+        </div>
+        <div class="section">
+            <button onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    function login() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
     
+        if(user !== "" && pass !== "") {
+            document.getElementById("loginSection").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
+        } else {
+            alert("Please enter username and password.");
+        }
+    }
+    function logout() {
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("loginSection").style.display = "block";
+}
+</script>
     <nav>
         <div>
             <a href="index.html">Home</a>
