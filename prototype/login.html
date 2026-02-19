@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login SpartanVet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <main class="card">
+    <h2>Login</h2>
+
+    <form id="loginForm" class="stack">
+      <label>
+        Role
+        <select id="role">
+          <option value="customer">Customer</option>
+          <option value="provider">Provider</option>
+        </select>
+      </label>
+
+      <label>
+        Username
+        <input id="username" type="text" required />
+      </label>
+
+      <label>
+        Password
+        <input id="password" type="password" required />
+      </label>
+
+      <button class="btn" type="submit">Log in</button>
+      <p id="msg" class="msg"></p>
+
+      <p class="hint">
+        logins:<br>
+        customer / pass<br>
+        provider / pass
+      </p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
