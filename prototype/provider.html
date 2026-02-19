@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provider Dashboard • SpartanVet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="provider.html">Provider</a>
+    <button class="linkbtn" onclick="logout()">Logout</button>
+  </nav>
+
+  <main class="card">
+    <h2>Appointment Requests</h2>
+    <p class="hint">can accept or deny requests and it updates the status.</p>
+
+    <div id="allAppts"></div>
+
+    <div class="row" style="margin-top:12px;">
+      <button class="btn" onclick="clearAppointments()">Clear All Appointments</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Provider Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    requireRole("provider");
+    renderProviderAppointments();
+  </script>
+</body>
+</html>

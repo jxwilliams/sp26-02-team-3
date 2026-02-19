@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard  SpartanVet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="customer.html">Customer</a>
+    <button class="linkbtn" onclick="logout()">Logout</button>
+  </nav>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Make an Appointment</h2>
+
+      <form id="apptForm" class="stack">
+        <label>
+          Pet Name
+          <input id="petName" required />
+        </label>
+
+        <label>
+          Date
+          <input id="date" type="date" required />
+        </label>
+
+        <label>
+          Time
+          <input id="time" type="time" required />
+        </label>
+
+        <label>
+          Reason
+          <input id="reason" placeholder="Checkup, vaccines, etc." required />
+        </label>
+
+        <button class="btn" type="submit">Create Appointment</button>
+        <p id="custMsg" class="msg"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>My Appointments</h2>
+      <div id="myAppts"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Customer Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    requireRole("customer");
+    renderCustomerAppointments();
+    setupCustomerForm();
+  </script>
+</body>
+</html>

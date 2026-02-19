@@ -1,0 +1,108 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+}
+
+.nav {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav a {
+  margin-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  padding: 15px;
+}
+
+.grid {
+  display: block;
+  padding: 15px;
+}
+
+.stack {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  max-width: 350px;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 10px;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+.linkbtn {
+  border: none;
+  background: none;
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.row {
+  margin-bottom: 6px;
+}
+
+.badge {
+  border: 1px solid #999;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.msg {
+  color: red;
+  margin-top: 8px;
+}
+
+.hint {
+  color: #555;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.footer {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
