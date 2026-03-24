@@ -18,6 +18,8 @@ The API supports core backend features for the system
 - Spring Data JPA
 - PostgreSQL / Neon
 - Maven
+
+
 [uml.pdf](https://github.com/user-attachments/files/26215698/uml.pdf)
 
 
@@ -157,23 +159,27 @@ Customer
   "name": "Jowuan",
   "email": "jowuan@example.com"
 }
+
 Vet
 {
   "name": "Dr Smith",
   "specialty": "Surgery"
 }
+
 Booking
 {
   "petName": "Buddy",
   "serviceType": "Checkup",
   "appointmentDate": "2026-04-01"
 }
+
 Review
 {
   "customerName": "Jowuan",
   "comment": "Great service",
   "rating": 5
 }
+
 Service
 {
   "serviceName": "Vaccination",
