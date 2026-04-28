@@ -12,15 +12,18 @@ public class Booking {
     private String petName;
     private String serviceType;
     private String appointmentDate;
+    private String status;
 
     public Booking() {
+        this.status = "Pending";
     }
 
-    public Booking(Long id, String petName, String serviceType, String appointmentDate) {
+    public Booking(Long id, String petName, String serviceType, String appointmentDate, String status) {
         this.id = id;
         this.petName = petName;
         this.serviceType = serviceType;
         this.appointmentDate = appointmentDate;
+        this.status = status;
     }
 
     public Long getId() {
@@ -39,6 +42,10 @@ public class Booking {
         return appointmentDate;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -53,5 +60,9 @@ public class Booking {
 
     public void setAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

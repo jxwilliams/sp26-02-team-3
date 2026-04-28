@@ -26,17 +26,34 @@ public class BookingService {
     }
 
     public Booking createBooking(Booking booking) {
+        if (booking.getStatus() == null || booking.getStatus().isBlank()) {
+            booking.setStatus("Pending");
+        }
         return bookingRepository.save(booking);
     }
 
     public Booking updateBooking(Long id, Booking updatedBooking) {
         Booking existing = getBookingById(id);
+
         if (existing != null) {
             existing.setPetName(updatedBooking.getPetName());
             existing.setServiceType(updatedBooking.getServiceType());
             existing.setAppointmentDate(updatedBooking.getAppointmentDate());
+            existing.setStatus(updatedBooking.getStatus());
             return bookingRepository.save(existing);
         }
+
+        return null;
+    }
+
+    public Booking updateBookingStatus(Long id, String status) {
+        Booking existing = getBookingById(id);
+
+        if (existing != null) {
+            existing.setStatus(status);
+            return bookingRepository.save(existing);
+        }
+
         return null;
     }
 
