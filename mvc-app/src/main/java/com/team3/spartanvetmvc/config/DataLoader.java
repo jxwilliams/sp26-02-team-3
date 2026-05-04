@@ -16,49 +16,60 @@ public class DataLoader {
     @Bean
     public CommandLineRunner loadDemoData(VetService vetService, BookingService bookingService, ReviewService reviewService) {
         return args -> {
-            // This just gives us one provider account for the class demo.
+            Vet provider1 = vetService.getVetByUsername("provider1");
             if (!vetService.usernameExists("provider1")) {
-                Vet demoVet = new Vet();
-                demoVet.setName("Dr. Taylor");
-                demoVet.setSpecialty("General Care");
-                demoVet.setUsername("provider1");
-                demoVet.setPassword("vet123");
-                vetService.saveVet(demoVet);
+                provider1 = new Vet();
+                provider1.setName("Dr. Taylor");
+                provider1.setSpecialty("General Care");
+                provider1.setUsername("provider1");
+                provider1.setPassword("vet123");
+                vetService.saveVet(provider1);
             }
 
+            Vet provider2 = vetService.getVetByUsername("provider2");
             if (!vetService.usernameExists("provider2")) {
-                Vet demoVet = new Vet();
-                demoVet.setName("Dr. Morgan");
-                demoVet.setSpecialty("Vaccination");
-                demoVet.setUsername("provider2");
-                demoVet.setPassword("vet123");
-                vetService.saveVet(demoVet);
+                provider2 = new Vet();
+                provider2.setName("Dr. Morgan");
+                provider2.setSpecialty("Vaccination");
+                provider2.setUsername("provider2");
+                provider2.setPassword("vet123");
+                vetService.saveVet(provider2);
             }
 
+            Vet provider3 = vetService.getVetByUsername("provider3");
             if (!vetService.usernameExists("provider3")) {
-                Vet demoVet = new Vet();
-                demoVet.setName("Dr. Lee");
-                demoVet.setSpecialty("Dental Cleaning");
-                demoVet.setUsername("provider3");
-                demoVet.setPassword("vet123");
-                vetService.saveVet(demoVet);
+                provider3 = new Vet();
+                provider3.setName("Dr. Lee");
+                provider3.setSpecialty("Dental Cleaning");
+                provider3.setUsername("provider3");
+                provider3.setPassword("vet123");
+                vetService.saveVet(provider3);
             }
 
             if (bookingService.getAllBookings().isEmpty()) {
                 Booking booking1 = new Booking();
+                booking1.setCustomerName("Jordan Smith");
                 booking1.setPetName("Buddy");
+                booking1.setProviderId(provider1.getId());
+                booking1.setProviderName(provider1.getName());
                 booking1.setServiceType("Checkup");
                 booking1.setAppointmentDate("2026-04-25");
                 bookingService.saveBooking(booking1);
 
                 Booking booking2 = new Booking();
+                booking2.setCustomerName("Mia Johnson");
                 booking2.setPetName("Luna");
+                booking2.setProviderId(provider2.getId());
+                booking2.setProviderName(provider2.getName());
                 booking2.setServiceType("Vaccination");
                 booking2.setAppointmentDate("2026-04-26");
                 bookingService.saveBooking(booking2);
 
                 Booking booking3 = new Booking();
+                booking3.setCustomerName("Avery Brown");
                 booking3.setPetName("Max");
+                booking3.setProviderId(provider3.getId());
+                booking3.setProviderName(provider3.getName());
                 booking3.setServiceType("Dental Cleaning");
                 booking3.setAppointmentDate("2026-04-27");
                 bookingService.saveBooking(booking3);

@@ -117,6 +117,7 @@
     <div>
         <a href="/">Home</a>
         <a href="/customer">Customer Portal</a>
+        <a href="/customer/logout">Logout</a>
     </div>
 </div>
 
@@ -128,11 +129,7 @@
             <div class="message">${successMessage}</div>
         </#if>
 
-        <form action="/customer/status" method="get">
-            <label for="customerName">Enter the same name used for booking</label>
-            <input type="text" id="customerName" name="customerName" value="${customerName!""}" required>
-            <button type="submit">Search</button>
-        </form>
+        <p>Showing appointment requests for ${customerName}.</p>
 
         <#if bookings??>
             <table>

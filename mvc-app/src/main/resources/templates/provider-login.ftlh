@@ -65,13 +65,6 @@
             border-radius: 6px;
         }
 
-        .demo-info {
-            margin-top: 20px;
-            background: #eef4ff;
-            padding: 12px;
-            border-radius: 6px;
-        }
-
         .home-link {
             display: inline-block;
             margin-bottom: 18px;
@@ -101,13 +94,6 @@
     <#if errorMessage??>
         <div class="error">${errorMessage}</div>
     </#if>
-
-    <!-- Demo account info for class testing. -->
-    <div class="demo-info">
-        <strong>Demo login:</strong><br>
-        Username: provider1<br>
-        Password: vet123
-    </div>
 </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provider Login</title>
+    <title>Customer Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -77,11 +77,10 @@
 <body>
 <div class="login-box">
     <a class="home-link" href="/">Back to Home</a>
-    <h1>Provider Login</h1>
-    <p>Sign in to review appointment requests.</p>
+    <h1>Customer Login</h1>
+    <p>Sign in to request appointments and check your status.</p>
 
-    <!-- Simple demo login form for the provider side. -->
-    <form action="/provider/login" method="post">
+    <form action="/customer/login" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
 
@@ -94,6 +93,8 @@
     <#if errorMessage??>
         <div class="error">${errorMessage}</div>
     </#if>
+
+    <p>Need an account? <a href="/customer/register">Register here</a>.</p>
 </div>
 </body>
 </html>

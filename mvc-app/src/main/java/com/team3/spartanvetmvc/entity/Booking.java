@@ -13,8 +13,10 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long customerId;
     private String customerName;
     private String petName;
+    private Long providerId;
     private String providerName;
     private String serviceType;
     private String appointmentDate;
@@ -23,10 +25,12 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(Long id, String customerName, String petName, String providerName, String serviceType, String appointmentDate, String status) {
+    public Booking(Long id, Long customerId, String customerName, String petName, Long providerId, String providerName, String serviceType, String appointmentDate, String status) {
         this.id = id;
+        this.customerId = customerId;
         this.customerName = customerName;
         this.petName = petName;
+        this.providerId = providerId;
         this.providerName = providerName;
         this.serviceType = serviceType;
         this.appointmentDate = appointmentDate;
@@ -49,6 +53,14 @@ public class Booking {
         this.id = id;
     }
 
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
     public String getCustomerName() {
         return customerName;
     }
@@ -63,6 +75,14 @@ public class Booking {
 
     public void setPetName(String petName) {
         this.petName = petName;
+    }
+
+    public Long getProviderId() {
+        return providerId;
+    }
+
+    public void setProviderId(Long providerId) {
+        this.providerId = providerId;
     }
 
     public String getProviderName() {

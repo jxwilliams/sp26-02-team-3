@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provider Login</title>
+    <title>Customer Register</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
             padding: 40px 20px;
         }
 
-        .login-box {
+        .register-box {
             max-width: 420px;
             margin: 60px auto;
             background: white;
@@ -75,25 +75,29 @@
     </style>
 </head>
 <body>
-<div class="login-box">
+<div class="register-box">
     <a class="home-link" href="/">Back to Home</a>
-    <h1>Provider Login</h1>
-    <p>Sign in to review appointment requests.</p>
+    <h1>Create Customer Account</h1>
+    <p>Register with a username and password to save your appointments.</p>
 
-    <!-- Simple demo login form for the provider side. -->
-    <form action="/provider/login" method="post">
+    <form action="/customer/register" method="post">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Login</button>
+        <button type="submit">Create Account</button>
     </form>
 
     <#if errorMessage??>
         <div class="error">${errorMessage}</div>
     </#if>
+
+    <p>Already have an account? <a href="/customer/login">Login here</a>.</p>
 </div>
 </body>
 </html>

@@ -73,7 +73,7 @@ public class ProviderController {
         }
 
         model.addAttribute("provider", provider);
-        model.addAttribute("bookings", bookingService.getAllBookings());
+        model.addAttribute("bookings", bookingService.getBookingsForProvider(provider));
         model.addAttribute("reviews", reviewService.getAllReviews());
         return "provider-dashboard";
     }
@@ -85,18 +85,26 @@ public class ProviderController {
                                       HttpSession session,
                                       RedirectAttributes redirectAttributes) {
 
-        if (session.getAttribute("providerId") == null) {
+        Long providerId = (Long) session.getAttribute("providerId");
+
+        if (providerId == null) {
+            return "redirect:/provider/login";
+        }
+
+        Vet provider = vetService.getVetById(providerId);
+        if (provider == null) {
+            session.invalidate();
             return "redirect:/provider/login";
         }
 
         // I only allow the two button choices from the dashboard.
         if ("Accepted".equals(status) || "Denied".equals(status)) {
-            boolean updated = bookingService.updateBookingStatus(id, status);
+            boolean updated = bookingService.updateBookingStatusForProvider(id, status, provider);
 
             if (updated) {
                 redirectAttributes.addFlashAttribute("successMessage", "Booking status updated.");
             } else {
-                redirectAttributes.addFlashAttribute("errorMessage", "Booking was not found.");
+                redirectAttributes.addFlashAttribute("errorMessage", "Booking was not found for this provider.");
             }
         } else {
             redirectAttributes.addFlashAttribute("errorMessage", "Invalid booking status.");

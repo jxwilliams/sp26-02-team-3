@@ -79,6 +79,7 @@
     <div>
         <a href="/">Home</a>
         <a href="/customer">Customer Portal</a>
+        <a href="/customer/logout">Logout</a>
     </div>
 </div>
 
@@ -87,17 +88,21 @@
         <h1>Request an Appointment</h1>
         <p>Your request will start as Pending until a provider accepts or denies it.</p>
 
+        <#if errorMessage??>
+            <p style="color: #b42318; font-weight: bold;">${errorMessage}</p>
+        </#if>
+
         <form action="/customer/book" method="post">
             <label for="customerName">Your Name</label>
-            <input type="text" id="customerName" name="customerName" required>
+            <input type="text" id="customerName" value="${customerName}" readonly>
 
             <label for="petName">Pet Name</label>
             <input type="text" id="petName" name="petName" required>
 
-            <label for="providerName">Provider</label>
-            <select id="providerName" name="providerName" required>
+            <label for="providerId">Provider</label>
+            <select id="providerId" name="providerId" required>
                 <#list providers as provider>
-                    <option value="${provider.name}" <#if selectedProvider?? && selectedProvider.id == provider.id>selected</#if>>
+                    <option value="${provider.id}" <#if selectedProvider?? && selectedProvider.id == provider.id>selected</#if>>
                         ${provider.name} - ${provider.specialty}
                     </option>
                 </#list>

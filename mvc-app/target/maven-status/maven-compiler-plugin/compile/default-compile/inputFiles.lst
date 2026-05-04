@@ -4,11 +4,14 @@
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/controller/HomeController.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/controller/ProviderController.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/entity/Booking.java
+/Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/entity/Customer.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/entity/Review.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/entity/Vet.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/repository/BookingRepository.java
+/Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/repository/CustomerRepository.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/repository/ReviewRepository.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/repository/VetRepository.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/service/BookingService.java
+/Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/service/CustomerService.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/service/ReviewService.java
 /Users/jowuanwilliams/Library/CloudStorage/OneDrive-UNCG/CSC340/sp26-02-team-3/mvc-app/src/main/java/com/team3/spartanvetmvc/service/VetService.java

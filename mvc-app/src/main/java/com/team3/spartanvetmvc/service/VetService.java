@@ -28,6 +28,11 @@ public class VetService {
         return vet.orElse(null);
     }
 
+    public Vet getVetByUsername(String username) {
+        Optional<Vet> vet = vetRepository.findByUsername(username);
+        return vet.orElse(null);
+    }
+
     public List<Vet> getAllVets() {
         return vetRepository.findAll();
     }

@@ -25,6 +25,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            margin-left: 16px;
         }
 
         .page {
@@ -65,13 +66,16 @@
 <body>
 <div class="top-bar">
     <div>Spartan Vet Customer Portal</div>
-    <a href="/">Home</a>
+    <div>
+        <a href="/">Home</a>
+        <a href="/customer/logout">Logout</a>
+    </div>
 </div>
 
 <div class="page">
     <div class="card">
         <h1>Customer Portal</h1>
-        <p>View providers, request an appointment, and check your appointment status.</p>
+        <p>Welcome, ${customerName}. View providers, request an appointment, and check your appointment status.</p>
 
         <div class="links">
             <a class="link-button" href="/customer/providers">View Providers</a>

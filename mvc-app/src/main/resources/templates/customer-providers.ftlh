@@ -78,13 +78,14 @@
     <div>
         <a href="/">Home</a>
         <a href="/customer">Customer Portal</a>
+        <a href="/customer/logout">Logout</a>
     </div>
 </div>
 
 <div class="page">
     <div class="card">
         <h1>Available Doctors</h1>
-        <p>Choose a provider to request an appointment.</p>
+        <p>Choose a provider to request an appointment, ${customerName}.</p>
 
         <table>
             <thead>
