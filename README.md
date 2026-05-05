@@ -67,13 +67,6 @@ Main folders used in the repo:
 - `prototype/` → earlier prototype pages
 - `docs/` → project documentation
 
-## How the MVC App Works
-
-The MVC app follows the normal Model View Controller structure:
-
-- **Model** → entities like Booking and other database data
-- **View** → FreeMarker templates (`.ftlh`) that show the pages
-- **Controller** → handles routes, loads data, and returns the correct views
 
 Example flow:
 - user opens a page
