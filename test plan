@@ -1,0 +1,105 @@
+Project Name: Spartan Vet
+Version: 1.0
+Date: May 2026
+Purpose:
+Spartan Vet is a web application for a veterinary office. It helps customers view providers, request appointments, manage profile information, and check appointment status. It also helps providers log in, view customer appointment requests assigned to them, manage those requests, and review customer feedback.
+
+Actors
+Provider P: Veterinary provider/doctor who logs in, views assigned appointment requests, accepts or denies requests, and views reviews.
+Customer C: Customer/pet owner who creates a profile, views available providers and services, requests appointments, and checks request status.
+Service S: System services such as profile storage, appointment booking, provider filtering, authentication flow, and review display.
+
+Use Cases
+1. Customer: US-CUST-001 — Register & manage profile
+Customer C1 logs in for the first time and creates a profile.
+C1 edits their profile to add preferences.
+C1 exists.
+
+2. Customer: US-CUST-002 — View providers and services
+Customer C1 opens the customer section and browses available providers.
+C1 views provider specialties and services offered.
+C1 uses this information before requesting an appointment.
+
+3. Customer: US-CUST-003 — Request appointment
+Customer C1 selects a provider and submits an appointment request.
+The system stores the request with status set to Pending.
+C1 can later return to view the request.
+
+4. Customer: US-CUST-004 — View appointment status
+Customer C1 opens their appointment page.
+The system shows whether the request is Pending, Accepted, or Denied.
+C1 can confirm whether the provider approved the request.
+
+5. Customer: US-CUST-005 — Submit review
+Customer C1 submits a review after receiving service.
+The system stores the review and makes it visible to the provider.
+
+6. Provider: US-PROV-001 — Log in to provider account
+Provider P1 opens the provider login page.
+P1 enters login information.
+If the login is valid, the system redirects P1 to the provider dashboard.
+
+7. Provider: US-PROV-002 — View and manage assigned appointment requests
+Provider P1 opens the provider dashboard.
+The system shows only the requests assigned to P1.
+P1 accepts or denies a request, and the system updates the request status in the database.
+
+8. Provider: US-PROV-003 — View customer reviews
+Provider P1 opens the reviews section from the dashboard.
+The system shows customer feedback related to the provider.
+P1 can read ratings and comments.
+
+CROSS-CUTTING TEST SCENARIOS (Non-Functional Requirements)
+
+Performance Requirements
+
+Scenario P1: Discover page response time < 1.5 seconds
+Setup: Server under typical load
+Steps:
+1. Measure response time for Browse page load with 5 active providers and 10+ services.
+2. Repeat 10 times.
+Expected Outcome: 95% of requests are less than or equal to 1.5 seconds.
+
+Scenario P2: Provider dashboard loads quickly
+Setup: Server under typical load with at least 10 appointment requests stored
+Steps:
+1. Log in as a provider.
+2. Measure dashboard load time after redirect from login.
+3. Repeat 10 times.
+Expected Outcome: 95% of dashboard loads are less than or equal to 2 seconds.
+
+Security & Privacy Requirements
+
+Scenario S1: Unauthorized user cannot access provider dashboard
+Setup: User is not logged in as a provider
+Steps:
+1. Enter the provider dashboard URL directly.
+2. Try to view appointment requests without logging in.
+Expected Outcome: The system blocks access or redirects the user to the provider login page.
+
+Scenario S2: Customer cannot view another provider’s assigned requests
+Setup: Multiple providers and bookings exist in the database
+Steps:
+1. Log in as Provider P1.
+2. View the provider dashboard.
+3. Check whether requests assigned to Provider P2 appear.
+Expected Outcome: P1 only sees requests assigned to P1.
+
+Usability Requirements
+
+Scenario U1: Customer can request an appointment without confusion
+Setup: Customer page is available with provider list and booking form
+Steps:
+1. Open the customer section.
+2. Select a provider.
+3. Fill out the appointment form.
+4. Submit the request.
+Expected Outcome: The process is clear, the form submits successfully, and the customer sees confirmation or updated status.
+
+Scenario U2: Provider can accept or deny a request in a simple workflow
+Setup: Provider has at least one pending appointment request
+Steps:
+1. Log in as the provider.
+2. Open the dashboard.
+3. Click Accept or Deny on a pending request.
+Expected Outcome: The status updates correctly and the provider can see the change immediately.
